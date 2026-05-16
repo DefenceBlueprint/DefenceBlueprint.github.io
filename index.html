@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="google-site-verification" content="pA4oXMr2BHeugKGcbgfwDPFzBP0Bzc_z7RzI-xJv2PM" />
+    
+    <meta name="description" content="Defence Blueprint is your 360° roadmap to cracking NDA, CDS, and SSB interviews. Get free ground-reality guidance, daily current affairs, and study materials.">
+    <meta name="keywords" content="Defence Blueprint, SSB preparation, CDS written exam, NDA preparation, deep dive current affairs, SSB interview tips, Indian Armed Forces, IAF, INS Vikrant, Indian Army Tank">
+    <meta name="author" content="Defence Blueprint">
+    
+    <title>Defence Blueprint ⚔️ | The Blueprint to Your Stars</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --olive-green: #4A5D23;
+            --olive-dark: #324016;
+            --gold: #FFC107;
+            --bg-dark: #121212;
+            --card-bg: #1e1e1e;
+            --text-light: #f4f4f4;
+            --social-bg: #E8D3A2;
+            --social-icon: #092C35;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* TOP BAR */
+        .top-bar {
+            background-color: #000000;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.95rem;
+            font-weight: 700;
+            border-bottom: 1px solid #333;
+        }
+
+        .top-contact {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-contact i {
+            color: var(--text-light);
+        }
+
+        .top-socials {
+            display: flex;
+            gap: 15px;
+        }
+
+        .top-socials a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .top-socials a:hover {
+            color: var(--gold);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--olive-dark);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--text-light);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        /* VISUAL SHOWCASE SLIDER SECTION */
+        .slider-section {
+            width: 100%;
+            height: 550px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--olive-green);
+            background-color: #000;
+        }
+
+        .slider-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.65); /* Keeps text perfectly sharp and readable */
+        }
+
+        /* Slide Caption with Gold Accent */
+        .slide-caption {
+            position: absolute;
+            bottom: 50px;
+            left: 5%;
+            width: 90%;
+            background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0));
+            padding: 25px;
+            border-left: 5px solid var(--gold);
+            border-radius: 0 5px 5px 0;
+            color: white;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide.active .slide-caption {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-caption h3 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .slide-caption h3 span {
+            color: var(--gold);
+        }
+
+        .slide-caption p {
+            font-size: 1.2rem;
+            color: #ddd;
+            font-weight: 500;
+        }
+
+        /* Pagination Dots */
+        .pagination-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .pagination-dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .pagination-dot.active {
+            background-color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: #1a1a1a;
+            border-bottom: 4px solid var(--olive-green);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            color: #eee;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--olive-green);
+            color: white;
+            border: 2px solid var(--olive-green);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--olive-green);
+        }
+
+        .btn-accent {
+            background-color: var(--gold);
+            color: #000;
+            border: 2px solid var(--gold);
+        }
+
+        .btn-accent:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        /* Core Pillars Section */
+        .features {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--gold);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px 20px;
+            border-radius: 10px;
+            border-top: 4px solid var(--olive-green);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--olive-dark);
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        /* PROFESSIONAL FOOTER */
+        footer {
+            background-color: #0d1208;
+            padding: 60px 5% 20px 5%;
+            color: #ccc;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .footer-col .logo {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-col p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .footer-col a.footer-link {
+            color: #aaa;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: 0.3s;
+        }
+
+        .footer-col a.footer-link:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        /* Copyright Text on Left */
+        .copyright-text {
+            margin-top: 25px !important;
+            font-size: 0.95rem;
+            color: #eee;
+        }
+
+        /* Premium Social Icons */
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .footer-socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: var(--social-bg);
+            color: var(--social-icon);
+            border-radius: 50%;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-socials a:hover {
+            background-color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #eee;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .top-bar { flex-direction: column; gap: 10px; text-align: center; } 
+            .slider-section { height: 350px; }
+            .slide-caption h3 { font-size: 1.4rem; }
+            .slide-caption p { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-contact">
+            <i class="fa-solid fa-envelope"></i> defenceblueprint@gmail.com
+        </div>
+        <div class="top-socials">
+            <a href="https://www.youtube.com/@Defence_Blueprint" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.instagram.com/deep_dive_currentaffairs?igsh=OHA0MnN0NHdnN3Jy" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://t.me/Defence_Blueprint" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#" class="logo">DEFENCE <span>BLUEPRINT</span> ⚔️</a>
+    </nav>
+
+    <section class="slider-section">
+        <div class="slider-container" id="sliderContainer">
+            
+            <div class="slide active">
+                <img src="jet.jpg" alt="IAF Fighter Jet">
+                <div class="slide-caption">
+                    <h3><span>IAF</span> Strike Force</h3>
+                    <p>"Touch the Sky with Glory." High-precision operational air superiority.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="navy.jpg" alt="INS Vikrant Aircraft Carrier">
+                <div class="slide-caption">
+                    <h3><span>Naval</span> Dominance</h3>
+                    <p>"Sam No Varunah." Sovereign power projection across the high seas.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="tank.jpg" alt="Indian Army Battle Tank">
+                <div class="slide-caption">
+                    <h3><span>Land</span> Battlegrounds</h3>
+                    <p>"The Armored Spearhead." Absolute dominance on the front line.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pagination-dots" id="paginationDots">
+            <div class="pagination-dot active" onclick="goToSlide(0)"></div>
+            <div class="pagination-dot" onclick="goToSlide(1)"></div>
+            <div class="pagination-dot" onclick="goToSlide(2)"></div>
+        </div>
+    </section>
+
+    <header class="hero">
+        <h1>No Myths. Just the Strategy to Get Recommended.</h1>
+        <p>The Blueprint to Your Stars. From mastering the SSB Stage 1 & 2 to cracking the CDS/NDA written exams. Real ground-reality guidance from an aspirant, for the aspirants.</p>
+        
+        <a href="https://www.youtube.com/@Defence_Blueprint" target="_blank" class="btn btn-primary"><i class="fa-brands fa-youtube"></i> Subscribe on YouTube</a>
+        <a href="https://t.me/Defence_Blueprint" target="_blank" class="btn btn-accent"><i class="fa-brands fa-telegram"></i> Join Telegram for Free PDFs</a>
+        <a href="downloads.html" class="btn" style="background-color: transparent; border: 2px solid white; color: white;"><i class="fa-solid fa-folder-open"></i> Free Study Materials</a>
+    </header>
+
+    <section class="features">
+        <h2>The Complete Blueprint</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>SSB Mentorship</h3>
+                <p>Master Stage-1 (Screening) and Stage-2 (Psychology, GTO, Personal Interview) with direct, practical insights. No myths, just facts.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-book-open"></i>
+                <h3>Written Exam Mastery</h3>
+                <p>Strategic preparation and study plans for NDA, CDS, and AFCAT. Focus on high-yield topics to secure your place in the merit list.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-globe"></i>
+                <h3>Deep Dive Current Affairs</h3>
+                <p>Stay ahead of the curve. Daily defence updates, international relations, and exam-focused news directly from our dedicated Instagram page.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>By an Aspirant, For the Aspirants 🇮🇳</h2>
+        <p>I am a former defence aspirant who has walked the same path you are on today. Having experienced SSB Stage 1 and Stage 2 firsthand, I know that while the dream of the uniform is powerful, the resources to get there can often be expensive and out of reach. I started this platform with one mission: To ensure that no aspirant is left behind due to a lack of resources.</p>
+        <br>
+        <p><strong>Need personal guidance? DM me directly on <a href="https://t.me/Defence_Blueprint" target="_blank" style="color: var(--gold); text-decoration: none;">Telegram</a>. Let's clear your doubts together. ⚔️</strong></p>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            
+            <div class="footer-col">
+                <a href="#" class="logo">DEFENCE <span>BLUEPRINT</span> ⚔️</a>
+                <p style="margin-top: 10px;"><strong>Email - </strong> <a href="mailto:defenceblueprint@gmail.com" style="display: inline; color: var(--gold); text-decoration: none;">defenceblueprint@gmail.com</a></p>
+                <p class="copyright-text">&copy; 2026 <strong>Defence Blueprint</strong>: All rights reserved.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#" class="footer-link">Home</a>
+                <a href="#about" class="footer-link">About Us</a>
+                <a href="downloads.html" class="footer-link">Free Study Materials</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Help & Support</h4>
+                <a href="#" class="footer-link">Terms & Conditions</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">FAQ's</a>
+                
+                <h4 style="margin-top: 25px;">Connect With Us</h4>
+                <div class="footer-socials">
+                    <a href="https://www.youtube.com/@Defence_Blueprint" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/deep_dive_currentaffairs?igsh=OHA0MnN0NHdnN3Jy" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://t.me/Defence_Blueprint" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            &copy; Designed by Defence Blueprint
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.pagination-dot');
+        const sliderContainer = document.getElementById('sliderContainer');
+        const totalSlides = slides.length;
+
+        function goToSlide(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            currentSlide = index;
+
+            sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentSlide].classList.add('active');
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+        }
+
+        function startAutoSlider() {
+            goToSlide(currentSlide + 1);
+        }
+
+        let slideInterval = setInterval(startAutoSlider, 6000);
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                goToSlide(index);
+                slideInterval = setInterval(startAutoSlider, 6000);
+            });
+        });
+
+        goToSlide(0);
+    </script>
+
+</body>
+</html>
