@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Study Materials | Defence Blueprint ⚔️</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --olive-green: #4A5D23;
+            --olive-dark: #324016;
+            --gold: #FFC107;
+            --bg-dark: #121212;
+            --card-bg: #1e1e1e;
+            --text-light: #f4f4f4;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--olive-dark);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--text-light);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span { color: var(--gold); }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .back-link:hover { color: var(--gold); }
+
+        /* Header Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #0a0a0a;
+            border-bottom: 4px solid var(--olive-green);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* PDF Grid Section */
+        .features {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px 20px;
+            border-radius: 10px;
+            border-top: 4px solid var(--olive-green);
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card i {
+            font-size: 3rem;
+            color: #ff4757; /* PDF Red */
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .card p { margin-bottom: 20px; color: #aaa; }
+
+        .btn-download {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--olive-green);
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-download:hover { background-color: var(--gold); color: black; }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 30px 5%;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">DEFENCE <span>BLUEPRINT</span> ⚔️</a>
+        <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    </nav>
+
+    <header class="hero">
+        <h1>Free Study Materials</h1>
+        <p>Download your TAT practice sets, current affairs capsules, and exam roadmaps below.</p>
+    </header>
+
+    <section class="features">
+        <div class="grid">
+            
+            <div class="card">
+                <i class="fa-solid fa-file-pdf"></i>
+                <h3>Deep Dive Current Affairs</h3>
+                <p>Latest exam-focused news and international relations updates.</p>
+                <a href="#" target="_blank" class="btn-download">Download PDF</a>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-file-pdf"></i>
+                <h3>SSB TAT Practice Set</h3>
+                <p>High-quality ground-reality pictures for Stage-2 Psychology practice.</p>
+                <a href="#" target="_blank" class="btn-download">Download PDF</a>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-file-pdf"></i>
+                <h3>Written Exam Roadmap</h3>
+                <p>High-yield topics and strategic study plans for NDA & CDS.</p>
+                <a href="#" target="_blank" class="btn-download">Download PDF</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Defence Blueprint. An independent educational platform.</p>
+    </footer>
+
+</body>
+</html>
