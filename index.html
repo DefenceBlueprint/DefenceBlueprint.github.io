@@ -294,24 +294,12 @@
             margin-bottom: 15px;
         }
 
-        /* About Section */
+        /* About Section Style Adjustments */
         .about {
             background-color: var(--olive-dark);
-            padding: 80px 5%;
-            text-align: center;
-        }
-
-        .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--gold);
-        }
-
-        .about p {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.2rem;
-            line-height: 1.8;
+            padding: 100px 5%;
+            border-bottom: 4px solid var(--olive-green);
+            position: relative;
         }
 
         /* PROFESSIONAL FOOTER */
@@ -497,11 +485,64 @@
         </div>
     </section>
 
-    <section class="about">
-        <h2>By an Aspirant, For the Aspirants 🇮🇳</h2>
-        <p>I am a former defence aspirant who has walked the same path you are on today. Having experienced SSB Stage 1 and Stage 2 firsthand, I know that while the dream of the uniform is powerful, the resources to get there can often be expensive and out of reach. I started this platform with one mission: To ensure that no aspirant is left behind due to a lack of resources.</p>
-        <br>
-        <p><strong>Need personal guidance? DM me directly on <a href="https://t.me/Defence_Blueprint" target="_blank" style="color: var(--gold); text-decoration: none;">Telegram</a>. Let's clear your doubts together. ⚔️</strong></p>
+    <section id="about" class="about">
+        <div style="max-width: 1100px; margin: 0 auto; text-align: left;">
+            
+            <h2 style="font-size: 2.8rem; color: var(--gold); text-align: center; margin-bottom: 50px; text-transform: uppercase; font-weight: 900; letter-spacing: 1px;">
+                About Us 🇮🇳
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: stretch;">
+                
+                <div style="background: rgba(0,0,0,0.2); padding: 35px; border-radius: 8px; border-top: 3px solid var(--olive-green); display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="color: var(--gold); font-size: 1.5rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;">
+                        <i class="fa-solid fa-shield-halved"></i> Mission Objective
+                    </h3>
+                    <p style="color: #ddd; font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px;">
+                        Getting recommended requires crushing two fronts: clearing the competitive written cut-offs and projecting uncoached authenticity during the personality evaluation at the Service Selection Board.
+                    </p>
+                    <p style="color: #ddd; font-size: 1.1rem; line-height: 1.8;">
+                        Defence Blueprint delivers comprehensive tactical plans for your written exams alongside an objective, unfiltered breakdown of testing criteria. We eliminate commercial templates so you can focus entirely on true merit.
+                    </p>
+                </div>
+
+                <div style="background: rgba(0,0,0,0.4); padding: 35px; border-radius: 8px; border-left: 5px solid var(--gold); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--text-light); font-size: 1.5rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 900;">
+                            The Founder's Journey: From the Trenches of Preparation
+                        </h3>
+                        <p style="color: #eee; font-size: 1.15rem; line-height: 1.8; font-style: italic; margin-bottom: 15px;">
+                            "I am a former defence aspirant who has walked the exact same path you are navigating today. I have stood in those lines, felt the pressure of the chest number, and gained first-hand, raw experience in both Stage-1 (Screening Dynamics) and Stage-2 (Psychological, GTO, and Personal Interview techniques)."
+                        </p>
+                        <p style="color: #eee; font-size: 1.15rem; line-height: 1.8; font-style: italic; margin-bottom: 15px;">
+                            "Having navigated the inner workings of the Service Selection Board (SSB), I saw a stark ground reality: the commercial defence coaching industry has turned selection into an expensive luxury. Brilliant, high-potential candidates who possess the natural raw grit to become officers are being left behind simply because they cannot afford the exorbitant fees of premium coaching academies."
+                        </p>
+                        <p style="color: #eee; font-size: 1.15rem; line-height: 1.8; font-style: italic;">
+                            "I founded Defence Blueprint to break this barrier. My operational motto is simple: Zero commercial traps. Absolute tactical guidance. You do not need to buy your recommendations. Whether it is building the foundational conceptual clarity to crack the written cut-offs (NDA, CDS, AFCAT) or mastering the un-coached authenticity required to project Officer Like Qualities (OLQs) at the SSB, I am here to guide you. This platform is my personal commitment to ensure that financial constraints never stand between a true patriot and their stars."
+                        </p>
+                    </div>
+                    
+                    <div style="margin-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+                        <p style="font-size: 1.2rem; font-weight: bold; color: var(--gold); margin: 0;">— Founder</p>
+                        <p style="font-size: 0.9rem; color: #aaa; margin: 0; text-transform: uppercase;">Defence Blueprint</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="margin-top: 60px; background: #121212; padding: 40px; border-radius: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                <h4 style="font-size: 1.4rem; color: var(--text-light); margin-bottom: 15px; font-weight: 700;">
+                    No Commercial Barriers. Direct Tactical Guidance.
+                </h4>
+                <p style="color: #aaa; max-width: 700px; margin: 0 auto 25px auto; font-size: 1.05rem;">
+                    Do you have urgent doubts regarding your current written study plan, OIR benchmarks, or PPDT narration style? Connect with us directly for practical evaluation.
+                </p>
+                <a href="https://t.me/Defence_Blueprint" target="_blank" class="btn btn-accent" style="margin: 0; padding: 14px 35px; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                    <i class="fa-brands fa-telegram"></i> Access Free Mentorship On Telegram
+                </a>
+            </div>
+
+        </div>
     </section>
 
     <footer>
