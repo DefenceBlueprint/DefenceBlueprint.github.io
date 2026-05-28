@@ -196,13 +196,17 @@
             background-color: var(--gold);
         }
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: #1a1a1a;
-            border-bottom: 4px solid var(--olive-green);
-        }
+      /* Hero Section with Background Image */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    /* The linear-gradient adds a dark tactical overlay so your white text stays highly readable */
+    background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), 
+                url('hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* This creates a premium 3D scrolling parallax effect */
+    border-bottom: 4px solid var(--olive-green);
+}
 
         .hero h1 {
             font-size: 3.5rem;
