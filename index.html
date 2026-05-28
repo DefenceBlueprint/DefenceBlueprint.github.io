@@ -196,18 +196,17 @@
             background-color: var(--gold);
         }
 
-      /* Hero Section with Background Image */
+ /* Hero Section with Parallax Background Image */
 .hero {
     text-align: center;
     padding: 120px 20px;
-    /* The linear-gradient adds a dark tactical overlay so your white text stays highly readable */
-    background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), 
+    /* Gradient overlay for readability + local image file */
+    background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)), 
                 url('hero-bg.jpg') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed; /* This creates a premium 3D scrolling parallax effect */
+    background-attachment: fixed; /* Parallax effect */
     border-bottom: 4px solid var(--olive-green);
 }
-
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 900;
